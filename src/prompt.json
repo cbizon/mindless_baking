@@ -1,0 +1,24 @@
+{
+  "preamble": "We are creating machine-readable annotations of public data sets in the croissant metadata format, which is based on schema.org.  These websites all provide information through websites.  Not every page contains all the information that we want to know.  I will now provide you a markdown version of a page from one of these datasets.  It will probably include elements at the top and bottom that are for navigation or presentation.  \n\nThe question that I am currently asking is: ",
+  "instruction": "Feel free to think out loud in responding, but please finish your response with the JSON structured output:\n\n{ \"$key\": \"...\" }\n\nIn the event that this page does not provide a $item, please finish the response with:\n\n{\"$key\": null }\n\nThe url of the page you are reviewing is: $url\n\nMarkdown:\n",
+  "name": {
+    "question": "What is the name of this data set?  That is, how does this resource refer to itself?\n\n",
+    "key": "name",
+    "item": "name"
+  },
+  "description": {
+    "question": "What is a description of this data set?  This should be extracted verbatim from the page if it is provided. The description should be about one paragraph. Do not return slogans or logos for the dataset.",
+    "key": "description",
+    "item": "description"
+  },
+  "license": {
+    "question": "What is the license for using this data set?  Most data sets will point to a license such as a creative commons license or MIT.  In this case, the result should be a string saying the name of the license.  It is possible that a source will have more than once license in which case all should be returned.  It is also possible that the site invents its own license or usage rules.  In this case, the result should be the URL of the page describing the rules. Do not respond with a URL whose contents you cannot verify.",
+    "key": "license",
+    "item": "license"
+  },
+  "citation": {
+    "question": "Most of these data sets are described in publications. When people use the data, the resource asks those people to cite these publications.  Most sites will list a single publication that they would like cited.  Often these resources will also have a longer list of publications that either further describe the resource or that the resource supports. But we are looking for the single best publication, i.e. the one that the resource asks users to cite.  When retrieving the citation, please return the string verbatim.\n",
+    "key": "cite",
+    "item": "citation"
+  }
+}
